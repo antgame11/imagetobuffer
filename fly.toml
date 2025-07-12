@@ -1,3 +1,8 @@
+# fly.toml app configuration file generated for imagetobuffer on 2025-07-12T21:50:11Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
 app = 'imagetobuffer'
 primary_region = 'iad'
 
