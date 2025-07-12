@@ -16,7 +16,9 @@ app.get('/', async (req, res) => {
     const imageFetch = await fetch(imageUrl);
     const imageBuffer = Buffer.from(await imageFetch.arrayBuffer());
     const rawImage = await sharp(imageBuffer)
-        .resize(imageWidth,imageHeight)
+        .resize(imageWidth, imageHeight, {
+            fit: 'fill'
+        })
         .ensureAlpha()
         .raw()
         .toBuffer()
